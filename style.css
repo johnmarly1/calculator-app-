@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0b1f36,
+            #102d4a
+        );
+
+    color: white;
+
+    padding: 20px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+
+/* Calculator */
+
+.calculator {
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* Header */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.icon {
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff7a00,
+        #ffb347
+    );
+
+    font-size: 32px;
+
+    box-shadow:
+        0 10px 30px rgba(255, 122, 0, 0.35);
+}
+
+.header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.header p {
+
+    color: #b8c7d9;
+
+    font-size: 15px;
+}
+
+
+/* Form */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #d9e6f2;
+}
+
+
+/* Input */
+
+.input-box {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+input,
+select {
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    padding: 14px 15px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 15px;
+}
+
+input::placeholder {
+
+    color: #9eafc2;
+}
+
+input:focus,
+select:focus {
+
+    border-color: #ff8c00;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 140, 0, 0.12);
+}
+
+
+/* Select */
+
+select {
+
+    cursor: pointer;
+}
+
+select option {
+
+    background: #10243a;
+
+    color: white;
+}
+
+
+/* Unit */
+
+.unit {
+
+    min-width: 85px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #d9e6f2;
+
+    font-size: 14px;
+}
+
+
+/* Buttons */
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.calculate-btn {
+
+    flex: 1;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7200,
+            #ff9d2e
+        );
+
+    box-shadow:
+        0 10px 25px rgba(255, 114, 0, 0.25);
+}
+
+.calculate-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(255, 114, 0, 0.35);
+}
+
+
+.reset-btn {
+
+    width: 110px;
+
+    color: #dce7f2;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.reset-btn:hover {
+
+    background: rgba(255, 255, 255, 0.16);
+}
+
+
+/* Error */
+
+.error {
+
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    color: #ff7777;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* Result */
+
+.result {
+
+    margin-top: 15px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 123, 255, 0.18),
+            rgba(255, 126, 0, 0.12)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.result-label {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #aebfd2;
+}
+
+.result h2 {
+
+    margin-top: 8px;
+
+    font-size: 42px;
+
+    color: #ff9a32;
+}
+
+.result p {
+
+    margin-top: 5px;
+
+    color: #d7e2ed;
+}
+
+
+/* Formula */
+
+.formula {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+.formula h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    color: #aebfd2;
+}
+
+.formula p {
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .calculator {
+
+        padding: 25px 20px;
+
+    }
+
+    .header h1 {
+
+        font-size: 25px;
+    }
+
+    .buttons {
+
+        flex-direction: column;
+    }
+
+    .reset-btn {
+
+        width: 100%;
+    }
+}
