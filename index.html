@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distance Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="calculator">
+
+            <div class="header">
+                <div class="icon">🚗</div>
+                <h1>Distance Calculator</h1>
+                <p>Calculate Distance, Speed or Time</p>
+            </div>
+
+            <!-- Calculation Type -->
+            <div class="form-group">
+                <label for="calculationType">What do you want to calculate?</label>
+
+                <select id="calculationType">
+                    <option value="distance">Distance</option>
+                    <option value="speed">Speed</option>
+                    <option value="time">Time</option>
+                </select>
+            </div>
+
+            <!-- Distance -->
+            <div class="form-group" id="distanceGroup">
+                <label for="distance">Distance</label>
+
+                <div class="input-box">
+                    <input
+                        type="number"
+                        id="distance"
+                        placeholder="Enter distance"
+                        min="0"
+                    >
+
+                    <select id="distanceUnit">
+                        <option value="km">km</option>
+                        <option value="miles">miles</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Speed -->
+            <div class="form-group" id="speedGroup">
+                <label for="speed">Speed</label>
+
+                <div class="input-box">
+                    <input
+                        type="number"
+                        id="speed"
+                        placeholder="Enter speed"
+                        min="0"
+                    >
+
+                    <span class="unit">km/h</span>
+                </div>
+            </div>
+
+            <!-- Time -->
+            <div class="form-group" id="timeGroup">
+                <label for="time">Time</label>
+
+                <div class="input-box">
+                    <input
+                        type="number"
+                        id="time"
+                        placeholder="Enter time"
+                        min="0"
+                    >
+
+                    <select id="timeUnit">
+                        <option value="hours">Hours</option>
+                        <option value="minutes">Minutes</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button id="calculateBtn" class="calculate-btn">
+                    Calculate
+                </button>
+
+                <button id="resetBtn" class="reset-btn">
+                    Reset
+                </button>
+
+            </div>
+
+            <!-- Error -->
+            <div id="errorMessage" class="error"></div>
+
+            <!-- Result -->
+            <div id="result" class="result">
+
+                <span class="result-label">RESULT</span>
+
+                <h2 id="resultValue">0</h2>
+
+                <p id="resultUnit"></p>
+
+            </div>
+
+            <!-- Formula -->
+            <div class="formula">
+
+                <h3>Formula</h3>
+
+                <p id="formulaText">
+                    Distance = Speed × Time
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
